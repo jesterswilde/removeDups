@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+	<title>
+		Remove Duplicates
+	</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+
+<body>
+	<script type="text/javascript" src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
+	<script type="text/javascript" src='/code.js'></script>
+	<div class="container">
+		<h2 class='text-center jumbotron'>Remove Duplicates
+			<small> A small helper tool</small>
+		</h2>
+		<div stlye="Min-height:50px">
+			
+		</div>
+		<h4>
+			Add to existing collection: 
+		</h4>
+		<form id='postForm' action='/api' method='post'>
+			<label> Collection Name: </label>
+			<input type='text' class='form-control' placeholder='Enter the name of the collection' id='postCollection'>
+			<label> List: </label>
+			<input type='textarea' class='form-control' placeholder='Enter your comma seperated list' id='postArray'>
+			<submit class='btn btn-primary' id='postButton' onclick='submitPost()'>Submit</submit>
+		</form>
+		<br><hr><br>
+		<h4>
+			View an existing collection:
+		</h4>
+		<form id='getForm'>
+			<label>Collection Name:</label>
+			<input type='text' placeholder='Enter Collection Name' class='form-control' id='getCollection'>
+			<submit class='btn btn-primary' id='getButton' onclick='submitGet()'>Retrieve</submit>
+		</form>
+		<div id='dataResults'></div>
+	</div>
+</body>
+
+</html>
